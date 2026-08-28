@@ -1,0 +1,15 @@
+### Testando a Rota CERTA (Propaga o contexto)
+# Se você cancelar essa requisição antes de terminar, 
+# a rotina interna vai detectar o cancelamento.
+GET http://localhost:8080/certo
+
+###
+
+### Testando a Rota ERRADA (Cria um contexto novo)
+# Se você cancelar essa requisição antes de terminar,
+# a rotina interna continuará rodando como um processo fantasma.
+GET http://localhost:8080/errado
+
+
+### Teste de API Lenta (5 segundos)
+GET http://localhost:8081/lenta
