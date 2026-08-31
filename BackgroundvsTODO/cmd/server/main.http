@@ -12,4 +12,4 @@ GET http://localhost:8080/errado
 
 
 ### Teste de API Lenta (5 segundos)
-GET http://localhost:8081/lenta
+GET http://localhost:8081/lerda

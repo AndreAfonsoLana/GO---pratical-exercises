@@ -1,0 +1,11 @@
+❌ ERRADO (Usando Background - Quebra a Árvore):
+[Cliente Clica em Cancelar] 🛑
+      │
+      └──> [Seu Handler] ---> Cria context.Background() ---> [API Externa] (Continua rodando 👻)
+                                                               (Trace Perdido)
+
+✅ CERTO (Propagando r.Context()):
+[Cliente Clica em Cancelar] 🛑
+      │
+      └──> [Seu Handler] ---> Passa r.Context() ---> [API Externa] (Cancelada na hora 🛑)
+                                                       (Trace Conectado e Visível no Zipkin)
